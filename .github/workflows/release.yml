@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master
+    workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment de déploiement'
+        required: false
+        default: 'production'
 
 permissions:
   contents: write
